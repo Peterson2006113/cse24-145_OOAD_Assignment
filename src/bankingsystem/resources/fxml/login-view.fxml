@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:id="loginPane"
+            prefWidth="400" prefHeight="320"
+            style="-fx-background-color: linear-gradient(to bottom,#eef2f3,#8e9eab);">
+    <children>
+        <VBox alignment="CENTER" spacing="10"
+              AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50"
+              AnchorPane.topAnchor="40" AnchorPane.bottomAnchor="40">
+            <children>
+                <Label text="Banking System Login" style="-fx-font-size:18;-fx-font-weight:bold;"/>
+                <TextField fx:id="usernameField" promptText="Username"/>
+                <PasswordField fx:id="passwordField" promptText="Password"/>
+                <ComboBox fx:id="roleCombo" promptText="Select Role">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Customer"/>
+                            <String fx:value="Bank Clerk"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button fx:id="loginButton" text="Login"
+                        style="-fx-background-color:#0066cc;-fx-text-fill:white;"/>
+                <Label fx:id="errorLabel" textFill="red"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
